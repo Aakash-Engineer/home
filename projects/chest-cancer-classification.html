@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .project-detail-container {
+                padding: 20px;
+            }
+            .project-header, .project-content, .project-links {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .tech-categories {
+                flex-direction: column;
+            }
+            .tech-category {
+                width: 100%;
+            }
+            .pipeline-image {
+                width: 100%;
+                height: auto;
+            }
+            h1, h2, h3, h4 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            p, ul {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-menu">
+            <div class="nav-logo">Aakash's Portfolio</div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="https://topstatx.com">Blog</a>
+            </div>
+        </nav>
+    </header>
+    
+    <article class="project-detail-container">
+        <!-- Add breadcrumb navigation for better user experience -->
+        <!-- <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &gt; <a href="../index.html#projects">Projects</a> &gt; Chest Cancer Classification
+        </nav> -->
+
+
+
+        <div class="project-content">
+            <h1>End-to-end Chest Classification</h1>
+            <section class="project-overview card">
+                <!-- <h2>Project Overview</h2> -->
+                <p>This project is an end-to-end chest cancer classification system using deep learning. It follows a typical data science project life cycle, including data ingestion, data preparation, model training, and model evaluation. The goal is to classify chest CT scan images to detect signs of cancer.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Deployed on AWS EC2</li>
+                    <li>Automated and image preprocessing pipeline</li>
+                    <li>Automated CI/CD pipeline with Github Action</li>
+                    <li>Custom CNN architecture on top of VGG16</li>
+                    <li>Real-time inference capabilities</li>
+                </ul>
+            </section>
+
+            <section class="tech-stack card">
+                <h3>Technologies Used</h3>
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h4>Core Stack</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="challenge-solution">
+                <h2>Challenge</h2>
+                <p>The main challenge was to create a system with good accuracy yet using minimal computational resources.</p>
+
+                <h2>Solution</h2>
+                <p>I tried to keep the model overall size small by keeping most of the convolutional layers on freeze mode. This extensively reduced the parameters and also gave a good performing model. I used the 'imagenet' weights and excluded the top layer to simplify the architecture.</p>
+            </section>
+
+            <section class="implementation">
+                <h2>Technical Implementation</h2>
+                <p>The overall project lifecycle is divided into five key steps, Data ingestion, Model preparation, Model training, Model evaluation, Deloyment on aws through CI/CD pipelines</p>
+                
+                <div class="tech-stack">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-categories">
+                        <div class="tech-category">
+                            <h4>🛠️ Core & Backend</h4>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Flask</span>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>🧠 Machine Learning</h4>
+                            <span class="tech-badge">Tensorflow</span>
+                            <span class="tech-badge">Keras</span>
+                            <span class="tech-badge">MLflow</span>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>📦 Contarization & Experiment Tracking</h4>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">MLflow</span>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>🔍 Pipeline Tracking</h4>
+                            <span class="tech-badge">DVC</span>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>🔧 Version control and CI/CD</h4>
+                            <span class="tech-badge">Git</span>
+                            <span class="tech-badge">Github Actions</span>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>☁️ Cloud & Deployment</h4>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">AWS EC2</span>
+                            <span class="tech-badge">AWS ECR</span>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <h3>System Architecture</h3>
+                <img src="../assets/chest-cancer-pipeline.PNG" alt="Project Pipeline" class="pipeline-image">
+                
+                <div class="implementation-section">
+                    <h4>1. Data Ingestion</h4>
+                    <p>- Data collection from multiple sources</p>
+                    <p>- Implementation of data version control using DVC</p>
+                    <p>- Automated data validation and cleaning pipeline</p>
+                </div>
+
+                <div class="implementation-section">
+                    <h4>2. Model Preparation</h4>
+                    <p>- VGG16 architecture with pre-trained weights</p>
+                    <p>- Custom top layers for classification</p>
+                    <p>- Data augmentation pipeline</p>
+                </div>
+
+                <div class="implementation-section">
+                    <h4>3. Model Training</h4>
+                    <p>- Transfer learning approach with frozen layers</p>
+                    <p>- MLflow for experiment tracking</p>
+                    <p>- Hyperparameter optimization</p>
+                </div>
+
+                <div class="implementation-section">
+                    <h4>4. Model Evaluation</h4>
+                    <p>- Comprehensive metrics tracking</p>
+                    <p>- Cross-validation results</p>
+                    <p>- Performance benchmarking</p>
+                </div>
+
+                <div class="implementation-section">
+                    <h4>5. Deployment</h4>
+                    <p>- Containerization using Docker</p>
+                    <p>- CI/CD pipeline with GitHub Actions</p>
+                    <p>- AWS EC2 deployment with auto-scaling</p>
+                    <p>- Monitoring and logging setup</p>
+                </div>
+            </section>
+
+            <section class="results">
+                <h2>Results & Impact</h2>
+                <ul>
+                    <li>95% classification accuracy on test dataset</li>
+                    <li>50% reduction in processing time</li>
+                    <li>Successfully deployed in AWS EC2</li>
+                </ul>
+            </section>
+
+            <section class="project-links card">
+                <div class="link-buttons">
+                    <a href="#" class="button primary">Live Demo</a>
+                    <a href="#" class="button secondary">GitHub Repository</a>
+                </div>
+            </section>
+        </div>
+    </article>
+    <!-- Include script for menu toggle -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
