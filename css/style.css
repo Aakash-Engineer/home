@@ -43,6 +43,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu {
@@ -88,6 +89,17 @@ body {
     cursor: pointer;
 }
 
+/* Hide the menu toggle button by default */
+.menu-toggle {
+    display: none;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    /* ...existing styles... */
+}
+
 /* Basic layout */
 .container {
     max-width: 1200px;
@@ -118,15 +130,15 @@ body {
     padding: var(--space-lg);
     margin-bottom: var(--space-lg);
     background: var(--card-bg);
-    border-radius: var(--radius-md);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    /* border-radius: var(--radius-md); */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.05); */
 }
 
 .section h2 {
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
     padding-bottom: var(--spacing-xs);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* Skills */
@@ -137,7 +149,7 @@ body {
 }
 
 .skill-group {
-    background: #f8f9fa;
+    /* background: #f8f9fa; */
     padding: 1rem;
     border-radius: 8px;
 }
@@ -154,6 +166,7 @@ body {
     border-radius: 4px;
     font-size: 0.9rem;
     border: 1px solid #eee;
+
 }
 
 /* Projects */
@@ -400,6 +413,20 @@ p {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 @media (min-width: 768px) {
@@ -419,8 +446,4 @@ p {
     }
 }
 
-/* Simplify card styles for consistency */
-.card {
-    background: var(--bg-color);
-    /* ...existing code... */
-}
+

@@ -55,12 +55,20 @@
                 margin-bottom: 20px;
             }
         }
+        .project-content ul {
+            padding-left: 20px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .menu-toggle {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <header class="main-header">
         <nav class="nav-menu">
-            <div class="nav-logo">Aakash's Portfolio</div>
+            <a href="../index.html" class="nav-logo" style="color: #1e293b; list-style: none;">Aakash's Portfolio</a>
             <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
             <div class="nav-links">
                 <a href="../index.html">Home</a>
@@ -69,7 +77,7 @@
             </div>
         </nav>
     </header>
-    
+    <br>
     <article class="project-detail-container">
         <!-- Add breadcrumb navigation for better user experience -->
         <!-- <nav class="breadcrumb">
@@ -83,6 +91,11 @@
             <section class="project-overview card">
                 <!-- <h2>Project Overview</h2> -->
                 <p>This project is an end-to-end chest cancer classification system using deep learning. It follows a typical data science project life cycle, including data ingestion, data preparation, model training, and model evaluation. The goal is to classify chest CT scan images to detect signs of cancer.</p>
+                <div class="link-buttons">
+                    <a href="http://54.226.91.192:8080/" class="button secondary" target="_blank">Live</a>
+                    <a href="https://github.com/Aakash-Engineer/end-to-end-chest-cancer-classification" target="_blank" class="button secondary">GitHub</a>
+                    <a href="http://54.226.91.192:8080/" class="button secondary" target="_blank">DagsHub</a>
+                </div><br>
                 
                 <h3>Key Features</h3>
                 <ul>
@@ -91,22 +104,11 @@
                     <li>Automated CI/CD pipeline with Github Action</li>
                     <li>Custom CNN architecture on top of VGG16</li>
                     <li>Real-time inference capabilities</li>
+                    <li>Highly flexible desing, can be extended easily</li>
                 </ul>
             </section>
-
-            <section class="tech-stack card">
-                <h3>Technologies Used</h3>
-                <div class="tech-categories">
-                    <div class="tech-category">
-                        <h4>Core Stack</h4>
-                        <div class="tech-badges">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">TensorFlow</span>
-                            <span class="tech-badge">Docker</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <br>
+            
 
             <section class="challenge-solution">
                 <h2>Challenge</h2>
@@ -167,14 +169,14 @@
                 
                 <div class="implementation-section">
                     <h4>1. Data Ingestion</h4>
-                    <p>- Data collection from multiple sources</p>
+                    <p>- Data collection from AWS Simple Storage Servive (S3)</p>
                     <p>- Implementation of data version control using DVC</p>
                     <p>- Automated data validation and cleaning pipeline</p>
                 </div>
 
                 <div class="implementation-section">
                     <h4>2. Model Preparation</h4>
-                    <p>- VGG16 architecture with pre-trained weights</p>
+                    <p>- VGG16 architecture with imagenet weights</p>
                     <p>- Custom top layers for classification</p>
                     <p>- Data augmentation pipeline</p>
                 </div>
@@ -188,7 +190,7 @@
 
                 <div class="implementation-section">
                     <h4>4. Model Evaluation</h4>
-                    <p>- Comprehensive metrics tracking</p>
+                    <p>- Comprehensive metrics tracking, accuracy and recall</p>
                     <p>- Cross-validation results</p>
                     <p>- Performance benchmarking</p>
                 </div>
@@ -196,7 +198,7 @@
                 <div class="implementation-section">
                     <h4>5. Deployment</h4>
                     <p>- Containerization using Docker</p>
-                    <p>- CI/CD pipeline with GitHub Actions</p>
+                    <p>- Automated CI/CD pipeline with GitHub Actions</p>
                     <p>- AWS EC2 deployment with auto-scaling</p>
                     <p>- Monitoring and logging setup</p>
                 </div>
@@ -211,12 +213,6 @@
                 </ul>
             </section>
 
-            <section class="project-links card">
-                <div class="link-buttons">
-                    <a href="#" class="button primary">Live Demo</a>
-                    <a href="#" class="button secondary">GitHub Repository</a>
-                </div>
-            </section>
         </div>
     </article>
     <!-- Include script for menu toggle -->
