@@ -90,23 +90,24 @@
             <h1>Movie Recomendation System</h1>
             <section class="project-overview card">
                 <!-- <h2>Project Overview</h2> -->
-                 <p>This project is an end-to-end fake news detection system. It involves several stages, including data ingestion, data validation, data preprocessing, model training, and evaluation. The project is implemented in Python and uses various machine learning techniques to classify news articles as real or fake.</p>
+                 <p>A sophisticated content-based movie recommendation system that suggests similar movies based on textual features like plot descriptions, genres, cast, and crew information. Built with Python and deployed as an interactive web application using Streamlit.</p>
                 <div class="link-buttons">
-                    <a href="http://44.211.175.29:8501/" class="button secondary" target="_blank">Live</a>
-                    <a href="https://github.com/Aakash-Engineer/end-to-end-fake-news-detection" target="_blank" class="button secondary">GitHub</a>
-                    <a href="http://54.226.91.192:8080/" class="button secondary" target="_blank">DagsHub</a>
+                    <a href="https://mrs-sys.streamlit.app/" class="button secondary" target="_blank">Live</a>
+                    <a href="https://github.com/Aakash-Engineer/movie-recommendation-system" target="_blank" class="button secondary">GitHub</a>
+                    <!-- <a href="#" class="button secondary" target="_blank">DagsHub</a> -->
                 </div>
                 <br>
                 <img src="../assets/movie-recomendation-system.png" alt="Project Image" class="project-image" style="width: 100%; height: auto; border-radius: 5px;">
                 <!-- add responsive project image -->
-                
-                <h3>Key Features</h3>
+                <br><br>
+                <h2>Key Features</h2>
                 <ul>
-                    <li>Deployed on AWS EC2</li>
-                    <li>Achieved 97% acccuracy</li>
-                    <li>Automated CI/CD pipeline with Github Action</li>
-                    <li>Real-time inference capabilities</li>
-                    <li>Highly flexible desing, can be extended easily</li>
+                    <li>Content based filtering</li>
+                    <li>Interactive UI</li>
+                    <li>Real-time Recommendations</li>
+                    <!-- <li>Automated CI/CD pipeline with Github Action</li> -->
+                    <li>TMDB Integration</li>
+                    <!-- <li>Highly flexible desing, can be extended easily</li> -->
                 </ul>
             </section>
             <br>
@@ -140,78 +141,80 @@
                             <!-- <span class="tech-badge">MLflow</span> -->
                         </div>
 
-                        <div class="tech-category">
+                        <!-- <div class="tech-category">
                             <h4>📦 Contarization & Experiment Tracking</h4>
                             <span class="tech-badge">Docker</span>
                             <span class="tech-badge">MLflow</span>
-                        </div>
+                        </div> -->
 
                         <div class="tech-category">
                             <h4>🔍 Pipeline Tracking</h4>
                             <span class="tech-badge">DVC</span>
                         </div>
 
-                        <div class="tech-category">
+                        <!-- <div class="tech-category">
                             <h4>🔧 Version control and CI/CD</h4>
                             <span class="tech-badge">Git</span>
                             <span class="tech-badge">Github Actions</span>
-                        </div>
+                        </div> -->
 
                         <div class="tech-category">
+                            <h4>☁️ API's</h4>
+                            <span class="tech-badge">Streamlit Cloud</span>
+                            <!-- <span class="tech-badge">AWS EC2</span>
+                            <span class="tech-badge">AWS ECR</span> -->
+                        </div>
+                        <div class="tech-category">
                             <h4>☁️ Cloud & Deployment</h4>
-                            <span class="tech-badge">Docker</span>
-                            <span class="tech-badge">AWS EC2</span>
-                            <span class="tech-badge">AWS ECR</span>
+                            <span class="tech-badge">Streamlit Cloud</span>
+                            <!-- <span class="tech-badge">AWS EC2</span>
+                            <span class="tech-badge">AWS ECR</span> -->
                         </div>
                     </div>
                 </div>
                 <br><br>
                 <h3>System Architecture</h3>
-                <img src="../assets/chest-cancer-pipeline.PNG" alt="Project Pipeline" class="pipeline-image">
+                <!-- <img src="../assets/chest-cancer-pipeline.PNG" alt="Project Pipeline" class="pipeline-image"> -->
                 
-                <div class="implementation-section">
-                    <h4>1. Data Ingestion</h4>
-                    <p>- Data collection from AWS Simple Storage Servive (S3)</p>
-                    <p>- Implementation of data version control using DVC</p>
-                    <p>- Automated data validation and cleaning pipeline</p>
-                </div>
-
-                <div class="implementation-section">
-                    <h4>2. Model Preparation</h4>
-                    <p>- VGG16 architecture with imagenet weights</p>
-                    <p>- Custom top layers for classification</p>
-                    <p>- Data augmentation pipeline</p>
-                </div>
-
-                <div class="implementation-section">
-                    <h4>3. Model Training</h4>
-                    <p>- Transfer learning approach with frozen layers</p>
-                    <p>- MLflow for experiment tracking</p>
-                    <p>- Hyperparameter optimization</p>
-                </div>
-
-                <div class="implementation-section">
-                    <h4>4. Model Evaluation</h4>
-                    <p>- Comprehensive metrics tracking, accuracy and recall</p>
-                    <p>- Cross-validation results</p>
-                    <p>- Performance benchmarking</p>
-                </div>
-
-                <div class="implementation-section">
-                    <h4>5. Deployment</h4>
-                    <p>- Containerization using Docker</p>
-                    <p>- Automated CI/CD pipeline with GitHub Actions</p>
-                    <p>- AWS EC2 deployment with auto-scaling</p>
-                    <p>- Monitoring and logging setup</p>
-                </div>
+                <ul>
+                    <li><strong>Data Pipeline:</strong> Custom ETL pipeline for data preprocessing and transformation</li>
+                    <li><strong>Model:</strong> TF-IDF vectorization with scikit-learn for text feature extraction</li>
+                    <li><strong>Similarity Matching:</strong> Cosine similarity for finding movie relationships</li>
+                    <li><strong>Data Storage:</strong> Uses Git LFS for handling large model files</li>
+                </ul>
             </section>
-
-            <section class="results">
+            <br>
+            <!-- <section class="results">
                 <h2>Results & Impact</h2>
                 <ul>
                     <li>95% classification accuracy on test dataset</li>
                     <li>50% reduction in processing time</li>
                     <li>Successfully deployed in AWS EC2</li>
+                </ul>
+            </section> -->
+<br>
+            <section class="results">
+
+                <h2>Future Imporovements</h2>
+                <ul>
+                    <li>Collaborative filtering integration</li>
+                    <li>User preference learning</li>
+                    <li>Performance optimization for larger datasets</li>
+                    <li>Advanced recommendation algorithms</li>
+                    <li>User feedback integration</li>
+                </ul>
+            </section>
+            <br>
+            <section class="results">
+
+                <h2>This project demonstrates expertise in:</h2>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Natural Language Processing</li>
+                    <li>Web Development</li>
+                    <li>API Integration</li>
+                    <li>Cloud Deployment</li>
+                    <li>Data Engineering</li>
                 </ul>
             </section>
 
